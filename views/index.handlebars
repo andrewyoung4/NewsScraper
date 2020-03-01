@@ -1,0 +1,31 @@
+<div class="container">
+    {{#each articles}}
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-12">
+            <div class="tile">
+                <div class="tile is-parent is-vertical articles">
+                    <div class="tile is-child box">
+                        <div class="hero is-bold is-small">
+                            <div class="hero-body">
+                                <div class="columns">
+                                    <div class="column is-10" id="article">
+                                        <h3 class="title is-size-4"><a class="header_font" href="{{link}}">{{title}}</a>
+                                        </h3>
+                                    </div>
+                                    <div class="column is-2">
+                                        <button data-articleId="{{_id}}" class="button is-success is-medium save_article" id="save">Save
+                                            Article</button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <p class="subtitle is-size-5 article_info"><a class="info_font" href="{{link}}">{{info}}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

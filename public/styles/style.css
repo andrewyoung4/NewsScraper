@@ -1,0 +1,50 @@
+body {
+  background-color: white;
+}
+
+#background {
+  background-image:url("https://media.istockphoto.com/videos/abstract-news-background-video-id478973691?s=640x640");
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#article{
+  background-image:url("https://media.istockphoto.com/videos/abstract-news-background-video-id478973691?s=640x640");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title {
+  margin-top: 10px;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  margin-bottom: 100px;
+}
+
+#subtitle {
+  font-size: 40px;
+}
+
+.header_font {
+  font-size: 25px;
+  color: white;
+}
+
+.article_info {
+  padding: 10px 30px 5px 30px;
+}
+
+.info_font {
+  color: black;
+}
+
+#nav{
+  color: black;
+  background-color: white;
+}
+
+#save{
+  margin-left: 50px;
+}

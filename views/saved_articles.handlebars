@@ -1,0 +1,64 @@
+<div class="container">
+  <h1 class="is-size-2">Saved Articles:</h1>
+  {{#each articles}}
+  <div class="tile is-ancestor">
+    <div class="tile is-vertical is-12">
+      <div class="tile">
+        <div class="tile is-parent is-vertical articles">
+          <div class="tile is-child box">
+            <div class="hero is-bold is-small" id="article">
+              <div class="hero-body">
+                <div class="columns">
+                  <div class="column is-9" >
+                    <h3 class="title is-size-4"><a class="header_font" href="{{link}}">{{title}}</a>
+                    </h3>
+                  </div>
+                  <div class="column is-3">
+                    <div class="field is-grouped">
+                      <p class="control">
+                        <button data-articleId="{{_id}}"
+                          class="button is-danger  is-medium remove_article">Remove</button>
+                      </p>
+                      <p class="control">
+                        <button data-articleId="{{_id}}"
+                          class="button is-info is-light is-medium save_note">Save
+                          Note</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="subtitle is-size-5 article_info"><a class="info_font" href="{{link}}">{{info}}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+{{!-- Notes Modal --}}
+<div class="modal new_note_modal" data-articleId="">
+  <div class="modal-card">
+    <header class="modal-card-head">
+      {{title}}
+      <button class="delete" id="cancel_note" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="tile is-ancestor box">
+        <div class="tile is-12">
+          <div class="tile is-parent">
+            <div class="tile is-child saved_notes">
+              
+              <div class="field">
+                <input class="input is-info" type="text" id="user_note" placeholder="Please let us know how you feel about this article!">
+              </div>
+              <button class="button is-success is-medium">Submit Feedback</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
